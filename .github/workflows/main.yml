@@ -192,11 +192,3 @@ jobs:
     - name: Run python rex.py --debug
       run: |
         python rex.py --brave --incognito --do-not-track --xvfb --screenshot
-
-    - name: Upload screenshots
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: seleniumbase-screenshots
-        path: |
-          ./latest_logs/
